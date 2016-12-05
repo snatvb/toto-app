@@ -1,0 +1,21 @@
+$step: 5;
+@for $i from 1 through 10 {
+  .mt-#{$i * $step} {
+    margin-top: 1px * $i * $step;
+  }
+  .mb-#{$i * $step} {
+    margin-bottom: 1px * $i * $step;
+  }
+}
+
+.w100p {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}

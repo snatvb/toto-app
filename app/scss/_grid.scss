@@ -1,0 +1,31 @@
+$colunmsxs: 24;
+// Настройка кол-ва колонок
+$mpcolunms: 5px;
+// Настройка отступов колонок
+
+.row {
+  margin-left: -$mpcolunms;
+  margin-right: -$mpcolunms;
+  > div {
+    padding-left: $mpcolunms;
+    padding-right: $mpcolunms;
+    min-height: 1px;
+    position: relative;
+  }
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+@for $i from 1 through $colunmsxs {
+  .col-xs-#{$i} {
+    width: 100%/$colunmsxs * $i;
+    float: left;
+  }
+}
+@for $i from 1 through $colunmsxs {
+  .col-offset-xs-#{$i} {
+    margin-left: 100%/$colunmsxs * $i;
+  }
+}
